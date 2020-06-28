@@ -8,13 +8,23 @@ package list5ex;
            after each selection.
  */
 
+import list5ex.services.DrawService;
+import list5ex.services.EditService;
+import list5ex.services.PrintService;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        processSquare();
+        // processsTriangle();
+    }
+
+    private static void processSquare() {
+
         PrintService printService = new PrintService();
         DrawService drawService = new DrawService();
         EditService editService = new EditService();
-
 
         printService.printTheTask('a');
         drawService.drawHorizontalLine();

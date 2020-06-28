@@ -1,8 +1,10 @@
-package list5ex;
+package list5ex.services;
+
+import list5ex.model.ShapeParameters;
 
 public class DrawService {
 
-    private ServiceParameters serviceParameters = new ServiceParameters();
+    private ShapeParameters serviceParameters = new ShapeParameters();
 
     public void drawHorizontalLine() {
         for (int i = 0; i < serviceParameters.getHorizontalLineLength(); i++) {

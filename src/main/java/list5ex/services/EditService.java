@@ -1,10 +1,13 @@
-package list5ex;
+package list5ex.services;
+
+import list5ex.model.Color;
+import list5ex.model.ShapeParameters;
 
 public class EditService {
 
-    private DrawService drawService = new DrawService();
-    private ServiceParameters serviceParameters = new ServiceParameters();
-    private SelectionService selectionService = new SelectionService();
+    private final DrawService drawService = new DrawService();
+    private final ShapeParameters serviceParameters = new ShapeParameters();
+    private final SelectionService selectionService = new SelectionService();
 
     public void editSquare() {
         while (true) {
@@ -41,8 +44,7 @@ public class EditService {
         } else {
             System.out.println(Color.RED + "You have reached the maximum number of rows " + maxNumberOfRows +
                                            " - you can't add anymore.");
-            drawService.drawSquare();
-            System.out.print(Color.RESET);
+            drawSquareResetColor();
         }
     }
 
@@ -55,8 +57,7 @@ public class EditService {
         } else {
             System.out.println(Color.RED + "You have reached the maximum number of columns " + maxNumberOfColumns +
                                            " - you can't add anymore.");
-            drawService.drawSquare();
-            System.out.print(Color.RESET);
+            drawSquareResetColor();
         }
     }
 
@@ -67,8 +68,7 @@ public class EditService {
             drawService.drawSquare();
         } else {
             System.out.println(Color.RED + "Can't remove the last row.");
-            drawService.drawSquare();
-            System.out.print(Color.RESET);
+            drawSquareResetColor();
         }
     }
 
@@ -79,8 +79,12 @@ public class EditService {
             drawService.drawSquare();
         } else {
             System.out.println(Color.RED + "Can't remove the last column.");
-            drawService.drawSquare();
-            System.out.print(Color.RESET);
+            drawSquareResetColor();
         }
+    }
+
+    private void drawSquareResetColor() {
+        drawService.drawSquare();
+        System.out.print(Color.RESET);
     }
 }

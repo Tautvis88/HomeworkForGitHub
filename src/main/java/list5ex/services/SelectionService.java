@@ -1,4 +1,6 @@
-package list5ex;
+package list5ex.services;
+
+import list5ex.model.Color;
 
 import java.util.Scanner;
 

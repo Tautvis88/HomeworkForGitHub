@@ -1,4 +1,4 @@
-package list5ex;
+package list5ex.model;
 
 public class Color {
     // Reset

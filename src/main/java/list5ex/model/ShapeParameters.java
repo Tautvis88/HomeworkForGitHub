@@ -1,23 +1,21 @@
-package list5ex;
+package list5ex.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-public class ServiceParameters {
+public class ShapeParameters {
 
     private static int horizontalLineLength = 13;
     private static int verticalLineLength = 5;
-    private static final List<Character> ASTERISK = new ArrayList<>();
-    static {
-        ASTERISK.add('*');
-    }
+    private static final List<Character> ASTERISK = Arrays.asList('*');
 
     public int getHorizontalLineLength() {
         return horizontalLineLength;
     }
 
     public void setHorizontalLineLength(int horizontalLineLength) {
-        ServiceParameters.horizontalLineLength = horizontalLineLength;
+        this.horizontalLineLength = horizontalLineLength;
     }
 
     public int getVerticalLineLength() {
@@ -25,7 +23,7 @@ public class ServiceParameters {
     }
 
     public void setVerticalLineLength(int verticalLineLength) {
-        ServiceParameters.verticalLineLength = verticalLineLength;
+        this.verticalLineLength = verticalLineLength;
     }
 
     public List<Character> getAsterisk() {
